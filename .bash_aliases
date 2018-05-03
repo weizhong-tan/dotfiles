@@ -17,6 +17,7 @@ alias gdi='git diff origin/integration'
 alias gdm='git diff origin/master'
 alias gri='git rebase -i integration'
 alias grm='git rebase -i master'
+alias glm..i='gl master..integration'
 
 alias sb='source ~/.bash_profile'
 alias notify="osascript -e 'display notification \"Command Complete\"'"
