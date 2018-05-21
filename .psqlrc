@@ -1,3 +1,5 @@
 \pset null '(null)'
 \pset pager off
 \x
+\set clher 'SELECT id FROM core.client WHERE code = \'HER\';'
+\set clprp 'SELECT id FROM core.client WHERE code = \'PRP\';'
