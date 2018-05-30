@@ -21,6 +21,11 @@ export PATH=$PATH:$(go env GOPATH)/bin
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
+# Interesting reading: https://www.digitalocean.com/community/tutorials/how-to-use-bash-history-commands-and-expansions-on-a-linux-vps
+HISTSIZE=1000000         # history in memory
+HISTFILESIZE=1000000000  # history on disk
+shopt -s histappend      # save all history, not just last closed session
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
