@@ -1,11 +1,5 @@
 export DEV_HOME="$HOME/development"
 
-# Alias definitions
-if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
-
-# Function definitions
-if [ -f ~/.bash_functions ]; then . ~/.bash_functions; fi
-
 # Set postgres path
 export PATH="${PATH}:/Applications/Postgres.app/Contents/Versions/latest/bin:${HOME}/bin:/usr/local/bin"
 
@@ -16,6 +10,12 @@ export NVM_DIR="$HOME/.nvm"
 # Setup Go path
 export GOPATH="${HOME}/go"
 export PATH=$PATH:$(go env GOPATH)/bin
+
+# Alias definitions
+if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
+
+# Function definitions
+if [ -f ~/.bash_functions ]; then . ~/.bash_functions; fi
 
 # Adds colour by default to ls
 export CLICOLOR=1
