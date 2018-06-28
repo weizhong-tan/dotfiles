@@ -8,8 +8,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Setup Go path
-export GOPATH="${HOME}/go"
-export PATH=$PATH:$(go env GOPATH)/bin
+if hash go 2>/dev/null; then
+	export GOPATH="${HOME}/go"
+	export PATH=$PATH:$(go env GOPATH)/bin
+fi
 
 # Alias definitions
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
