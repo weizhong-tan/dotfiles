@@ -5,7 +5,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 alias gl='git log  --color --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'\'' --abbrev-commit'
-alias gg='git status -s'
+alias gg='git status -s -b'
 alias gcb='git checkout -b'
 alias gb='git branch'
 alias gbr='git branch --remote'
