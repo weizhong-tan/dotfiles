@@ -69,29 +69,14 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
-	<key>NSWindow Frame NSFontPanel</key>
-	<string>394 125 539 94 0 0 1280 777 </string>
-	<key>NSWindow Frame ProfilesPanel</key>
-	<string>545 316 735 382 0 0 1280 800 </string>
-	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
-	<string>954 -335 616 174 622 -800 1280 778 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 782 620 392 0 0 2560 1418 </string>
-	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 204 599 401 0 0 1280 800 </string>
+	<string>410 381 620 392 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>484 273 796 473 0 0 1280 800 </string>
+	<string>269 270 918 494 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>628 -750 1274 750 622 -800 1280 800 </string>
+	<string>0 427 650 450 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>735 -736 650 450 622 -800 1280 800 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>774 -745 650 450 622 -800 1280 800 </string>
+	<string>644 281 650 450 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -255,7 +240,7 @@
 				<real>0.0</real>
 			</dict>
 			<key>Background Image Location</key>
-			<string>/Users/wzt/Documents/n1ci0trfgrey.jpg</string>
+			<string>/Users/wzt/Documents/n0x244u8ajez.png</string>
 			<key>Blend</key>
 			<real>0.31923452524038476</real>
 			<key>Blinking Cursor</key>
@@ -630,6 +615,8 @@
 			<true/>
 			<key>Normal Font</key>
 			<string>AndaleMono 14</string>
+			<key>Only The Default BG Color Uses Transparency</key>
+			<false/>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -694,27 +681,12 @@
 			<string>/Users/wzt</string>
 		</dict>
 	</array>
-	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
-	<true/>
-	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
-	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>1886AFD0-5A41-42BB-9D17-BD3C690B6D2A</string>
-	<key>NoSyncLastTipTime</key>
-	<real>538524322.49820101</real>
-	<key>NoSyncPermissionToShowTip</key>
-	<false/>
+	<string>F66B5488-AFFA-4329-B36D-0995E265F952</string>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>514722304.77882302</real>
-	<key>NoSyncTipsToNotShow</key>
-	<array>
-		<string>000</string>
-		<string>0000</string>
-		<string>0001</string>
-		<string>0002</string>
-	</array>
+	<real>551815970.12602699</real>
 	<key>OpenBookmark</key>
 	<false/>
 	<key>PMPrintingExpandedStateForPrint2</key>
@@ -755,7 +727,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/wzt/Documents</string>
+	<string>/Users/wzt</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>SUAutomaticallyUpdate</key>
@@ -765,16 +737,12 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=39</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=26</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-06-27T10:02:24Z</date>
+	<date>2018-07-04T18:04:20Z</date>
 	<key>SUSendProfileInfo</key>
-	<false/>
-	<key>SUSkippedVersion</key>
-	<string>3.1.6</string>
-	<key>Secure Input</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
@@ -790,6 +758,8 @@
 	</array>
 	<key>UseBorder</key>
 	<false/>
+	<key>UseLionStyleFullscreen</key>
+	<true/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
@@ -799,6 +769,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.5</string>
+	<string>3.1.6</string>
 </dict>
 </plist>
