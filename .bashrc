@@ -52,7 +52,7 @@ y3=$(tput setaf 214) # yellow 3
 b1=$(tput setaf 39)  # blue
 g1=$(tput setaf 10)  # green
 m1=$(tput setaf 5)   # magenta
-export PS1='\[$y3\]\d\[$y2\]@\[$y1\]\t \[$y1\]\u\[$y2\]@\[$y3\]\h:\[$b1\]$(pwd)\[$g1\]$(__git_ps1 "(%s)") \n\[$m1\]$ \[$reset\]'
+export PS1='\[$y3\]\d\[$y2\]@\[$y1\]\t \[$y1\]\u\[$y2\]@\[$y3\]\h:\[$b1\]$(pwd)\[$g1\]$(__git_ps1 "(%s)") \n\[$m1\]ζ \[$reset\]'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/wzt/google-cloud-sdk/path.bash.inc' ]; then source '/Users/wzt/google-cloud-sdk/path.bash.inc'; fi
