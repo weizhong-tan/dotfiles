@@ -48,4 +48,8 @@ function set_git_info() {
 
   git config --global user.name $name
   git config --global user.email $email
+
+  # make sure it's correct
+  git config --global user.name
+  git config --global user.email
 }
