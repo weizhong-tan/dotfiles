@@ -8,31 +8,31 @@ COL_MAGENTA=$ESC_SEQ"35;01m"
 COL_CYAN=$ESC_SEQ"36;01m"
 
 function ok() {
-  echo -e "$COL_GREEN [ok]$COL_RESET "$1
+  printf "$COL_GREEN [ok]$COL_RESET $1\n"
 }
 
 function bot() {
-  echo -e "\n$COL_GREEN\[._.]/$COL_RESET - "$1
+  printf "\n$COL_GREEN\[._.]/$COL_RESET - $1\n"
 }
 
 function running() {
-  echo -e "$COL_CYAN ⇒ $COL_RESET "$1": "
+  printf "$COL_CYAN ⇒ $COL_RESET $1:\n"
 }
 
 function action() {
-  echo -e "\n$COL_YELLOW [action]:$COL_RESET\n ⇒ $1"
+  printf "\n$COL_YELLOW [action]:$COL_RESET\n ⇒ $1\n"
 }
 
 function warn() {
-  echo -e "$COL_YELLOW [warning]$COL_RESET "$1
+  printf "$COL_YELLOW [warning]$COL_RESET $1\n"
 }
 
 function error() {
-  echo -e "$COL_RED [error]$COL_RESET "$1
+  printf "$COL_RED [error]$COL_RESET $1\n"
 }
 
 function yes_or_no() {
-  echo -n "\n$COL_MAGENTA $1 $COL_RESET(y/n) "
+  printf "\n$COL_MAGENTA $1 $COL_RESET(y/n) "
   read response
 }
 
@@ -44,7 +44,7 @@ function confirmed() {
 }
 
 function set_computer_info() {
-    echo -e "$COL_MAGENTA Enter your computer name$COL_RESET: "
+    printf "$COL_MAGENTA Enter your computer name$COL_RESET: "
     read cpname
 
     sudo scutil --set ComputerName "$cpname"
@@ -54,9 +54,9 @@ function set_computer_info() {
 }
 
 function set_git_info() {
-  echo -n "\n$COL_MAGENTA set your github username$COL_RESET: "
+  printf "$COL_MAGENTA set your github username$COL_RESET: "
   read name
-  echo -n "\n$COL_MAGENTA set your github email$COL_RESET: "
+  printf "$COL_MAGENTA set your github email$COL_RESET: "
   read email
 
   git config --global user.name $name

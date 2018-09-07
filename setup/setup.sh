@@ -2,7 +2,7 @@
 source resources.sh
 
 bot "hello! welcome to your new computer"
-bot "let's get going! "
+bot "let's get going!"
 
 bot "installing osx command line tools"
 xcode-select --install
