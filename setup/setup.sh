@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 source resources.sh
 
 bot "hello! welcome to your new computer"
