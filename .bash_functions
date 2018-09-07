@@ -1,3 +1,27 @@
+function set_computer_info() {
+    printf "$COL_MAGENTA Enter your computer name$COL_RESET: "
+    read cpname
+
+    sudo scutil --set ComputerName "$cpname"
+    sudo scutil --set HostName "$cpname"
+    sudo scutil --set LocalHostName "$cpname"
+    defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$cpname"
+}
+
+function set_git_info() {
+  printf "$COL_MAGENTA set your github username$COL_RESET: "
+  read name
+  printf "$COL_MAGENTA set your github email$COL_RESET: "
+  read email
+
+  git config --global user.name $name
+  git config --global user.email $email
+
+  # make sure it's correct
+  git config --global user.name
+  git config --global user.email
+}
+
 # Create `ipa` command. `ipa local` gives your
 # local IP, `ipa remote` gives your external IP.
 # `ipa` gives both.
@@ -30,26 +54,12 @@ gclean() {
     vi /tmp/merged-branches && xargs git branch -d < /tmp/merged-branches
 }
 
-function set_computer_info() {
-    printf "$COL_MAGENTA Enter your computer name$COL_RESET: "
-    read cpname
-
-    sudo scutil --set ComputerName "$cpname"
-    sudo scutil --set HostName "$cpname"
-    sudo scutil --set LocalHostName "$cpname"
-    defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$cpname"
-}
-
-function set_git_info() {
-  printf "$COL_MAGENTA set your github username$COL_RESET: "
-  read name
-  printf "$COL_MAGENTA set your github email$COL_RESET: "
-  read email
-
-  git config --global user.name $name
-  git config --global user.email $email
-
-  # make sure it's correct
-  git config --global user.name
-  git config --global user.email
+# `o` with no arguments opens the current directory, otherwise opens the given
+# location
+function o() {
+	if [ $# -eq 0 ]; then
+		open .;
+	else
+		open "$@";
+	fi;
 }
