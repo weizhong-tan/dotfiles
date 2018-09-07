@@ -24,12 +24,16 @@ else
 fi
 
 # install brew
-running "installing brew"
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if hash brew 2>/dev/null; then
+  printf "homebrew already installed"
+else
+  running "installing brew"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-if [[ $? != 0 ]]; then
+  if [[ $? != 0 ]]; then
     error "unable to install homebrew -> quitting setup"
     exit 2
+  fi
 fi
 
 running "updating to most recent brew version"
@@ -38,20 +42,23 @@ brew update
 ok
 
 running "Select which bundled brew & brew-cask packages you want to install"
-source installs/.brew_installs
-ok "feel free to add more brew packages! "
+source installs/brew_installs
+ok "feel free to add more brew packages!"
 
 # globally install key npm pkgs
 running "Select which bundled npm modules you want to install"
-source installs/.npm_installs
-ok "feel free to add more npm modules! "
+source installs/npm_installs
+ok "feel free to add more npm modules!"
 
 running "sourcing bashrc"
 source ~/.bashrc
 ok
 
-running "sourcing osx defaults"
-source .osx
-ok
+yes_or_no "do you want to set sensible OSX defaults?"
+if confirmed; then
+  running "sourcing osx defaults"
+  source .osx
+  ok
+fi
 
 bot "whooo, all set! "
