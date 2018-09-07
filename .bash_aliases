@@ -19,7 +19,8 @@ alias gri='git rebase -i integration'
 alias grm='git rebase -i master'
 alias glm..i='gl master..integration'
 
-alias sb='source ~/.bash_profile'
+alias reload='source ~/.bash_profile'
 alias notify="osascript -e 'display notification \"Command Complete\"'"
 
-alias cdgo="cd $GOPATH/src/github.com/digitalanimal/"
+# ock the screen
+alias lksc="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
