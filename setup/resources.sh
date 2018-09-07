@@ -1,4 +1,6 @@
-#! Colors
+#!/bin/bash
+
+# Colors
 ESC_SEQ="\x1b["
 COL_RESET=$ESC_SEQ"39;49;00m"
 COL_RED=$ESC_SEQ"31;01m"

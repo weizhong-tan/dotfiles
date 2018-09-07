@@ -65,6 +65,3 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 
 # avn https://github.com/wbyoung/avn
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
-
-# Amigo stuff
-if [ -f $HOME/.bash_amigo ]; then source $HOME/.bash_amigo; fi
