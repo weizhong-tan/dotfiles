@@ -1,4 +1,8 @@
 export DEV_HOME="$HOME/development"
+export DOT_FILES=~/.dotfiles
+
+# Aliases and functions
+if [ -f "$DOT_FILES/load.sh" ]; then source "$DOT_FILES/load.sh"; fi
 
 # Set postgres path
 export PATH="${PATH}:/Applications/Postgres.app/Contents/Versions/latest/bin:${HOME}/bin:/usr/local/bin"
@@ -13,11 +17,6 @@ if hash go 2>/dev/null; then
 	export GOPATH="${HOME}/go"
 	export PATH=$PATH:$(go env GOPATH)/bin
 fi
-
-# Aliases and functions
-for file in ~/.dotfiles/.{aliases,functions}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
-done;
 
 # Adds colour by default to ls
 export CLICOLOR=1
