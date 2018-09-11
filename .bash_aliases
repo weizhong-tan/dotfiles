@@ -1,6 +1,7 @@
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
-alias l='ls -lah'
+# enhanced ls -lAh
+alias l='exa --long --all --header --git --group-directories-first'
 alias ..='cd ..'
 alias ...='cd ../..'
 
@@ -23,5 +24,5 @@ alias glm..i='gl master..integration'
 alias reload!='source ~/.bash_profile'
 alias notify="osascript -e 'display notification \"Command Complete\"'"
 
-# ock the screen
+# lock the screen
 alias lksc="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"

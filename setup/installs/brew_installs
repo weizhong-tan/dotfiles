@@ -32,6 +32,9 @@ function cask_install() {
 running "installing python"
 require_brew python
 
+running "installing exa"
+require_brew exa
+
 ########## APPS ###########
 running "installing brew cask"
 brew tap caskroom/cask
