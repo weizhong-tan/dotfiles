@@ -4,6 +4,7 @@ alias l='ls -lah'
 alias ..='cd ..'
 alias ...='cd ../..'
 
+alias g='git'
 alias gl='git log  --color --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'\'' --abbrev-commit'
 alias gg='git status -s -b'
 alias gcb='git checkout -b'
@@ -19,7 +20,7 @@ alias gri='git rebase -i integration'
 alias grm='git rebase -i master'
 alias glm..i='gl master..integration'
 
-alias reload='source ~/.bash_profile'
+alias reload!='source ~/.bash_profile'
 alias notify="osascript -e 'display notification \"Command Complete\"'"
 
 # ock the screen
