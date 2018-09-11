@@ -96,3 +96,5 @@ export DOT_FILES=~/.dotfiles
 
 # Aliases and functions
 if [ -f "$DOT_FILES/load.sh" ]; then source "$DOT_FILES/load.sh"; fi
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
