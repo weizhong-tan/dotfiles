@@ -69,12 +69,19 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
+	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
+	<string>412 545 616 174 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 381 620 392 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 270 918 494 0 0 1440 900 </string>
+	<string>269 335 796 473 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 427 650 450 0 0 1440 900 </string>
+	<string>0 155 1282 722 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>644 281 650 450 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -239,8 +246,8 @@
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
-			<key>Background Image Location</key>
-			<string>/Users/wzt/Documents/n0x244u8ajez.png</string>
+			<key>Background Image Is Tiled</key>
+			<false/>
 			<key>Blend</key>
 			<real>0.31923452524038476</real>
 			<key>Blinking Cursor</key>
@@ -685,6 +692,8 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>F66B5488-AFFA-4329-B36D-0995E265F952</string>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>551815970.12602699</real>
 	<key>OpenBookmark</key>
@@ -741,9 +750,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-07-04T18:04:20Z</date>
+	<date>2018-09-08T00:05:13Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SUSkippedVersion</key>
+	<string>3.2.0</string>
 	<key>ShowFullScreenTabBar</key>
 	<true/>
 	<key>StretchTabsToFillBar</key>
@@ -769,6 +780,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.6</string>
+	<string>3.1.7</string>
 </dict>
 </plist>
