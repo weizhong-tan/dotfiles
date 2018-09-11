@@ -14,11 +14,10 @@ if hash go 2>/dev/null; then
 	export PATH=$PATH:$(go env GOPATH)/bin
 fi
 
-# Alias definitions
-if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
-
-# Function definitions
-if [ -f ~/.bash_functions ]; then . ~/.bash_functions; fi
+# Aliases and functions
+for file in ~/.dotfiles/.{aliases,functions}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
 
 # Adds colour by default to ls
 export CLICOLOR=1
