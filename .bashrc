@@ -2,21 +2,9 @@ export DEV_HOME="$HOME/development"
 export DOT_FILES=~/.dotfiles
 
 # Aliases and functions
-if [ -f "$DOT_FILES/load.sh" ]; then source "$DOT_FILES/load.sh"; fi
+if [ -f "$DOT_FILES/load.sh" ]; then source "$DOT_FILES/load.sh"; DOT_FILES
 
-# Set postgres path
-export PATH="${PATH}:/Applications/Postgres.app/Contents/Versions/latest/bin:${HOME}/bin:/usr/local/bin"
-
-# Set nvm path
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Setup Go path
-if hash go 2>/dev/null; then
-	export GOPATH="${HOME}/go"
-	export PATH=$PATH:$(go env GOPATH)/bin
-fi
 
 # Adds colour by default to ls
 export CLICOLOR=1
@@ -30,9 +18,6 @@ shopt -s histappend      # save all history, not just last closed session
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
-
-# adds RSA or DSA identities to the authentication agent: ~/.ssh/id_rsa, ~/.ssh/id_dsa and ~/.ssh/identity
-ssh-add
 
 # git branch autocomplete
 source ~/.git-completion.bash
@@ -60,6 +45,3 @@ if [ -f '/Users/wzt/google-cloud-sdk/path.bash.inc' ]; then source '/Users/wzt/g
 if [ -f '/Users/wzt/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/wzt/google-cloud-sdk/completion.bash.inc'; fi
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-
-# avn https://github.com/wbyoung/avn
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
