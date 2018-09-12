@@ -2,7 +2,7 @@ export DEV_HOME="$HOME/development"
 export DOT_FILES=~/.dotfiles
 
 # Aliases and functions
-if [ -f "$DOT_FILES/load.sh" ]; then source "$DOT_FILES/load.sh"; DOT_FILES
+if [ -f "$DOT_FILES/load.sh" ]; then source "$DOT_FILES/load.sh"; fi
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
