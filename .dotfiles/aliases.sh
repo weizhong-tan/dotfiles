@@ -31,4 +31,7 @@ alias reload!='source ~/.zshrc'
 alias notify="osascript -e 'display notification \"Command Complete\"'"
 
 # lock the screen
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# turn off display
+alias afk='pmset displaysleepnow'
