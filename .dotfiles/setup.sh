@@ -80,6 +80,10 @@ CURRENTSHELL=$(dscl . -read /Users/$USER UserShell | awk '{print $2}')
 if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
   bot "setting newer homebrew zsh (/usr/local/bin/zsh) as your shell (password required)"
   sudo dscl . -change /Users/$USER UserShell $SHELL /usr/local/bin/zsh > /dev/null 2>&1
+
+  # https://stackoverflow.com/questions/36691601/how-to-make-zsh-autocomplete-failover-to-compdef-files
+  bot "adding new zsh to /etc/shells (fixes command completion)"
+  echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells > /dev/null
   ok
 fi
 

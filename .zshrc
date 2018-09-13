@@ -70,6 +70,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+export DOT_FILES=~/.dotfiles
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -92,9 +93,9 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-export DOT_FILES=~/.dotfiles
-
 # Aliases and functions
 if [ -f "$DOT_FILES/load.sh" ]; then source "$DOT_FILES/load.sh"; fi
 
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# export fpath=(path/to/zsh-completions/src $fpath)
