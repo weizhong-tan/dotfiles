@@ -84,6 +84,11 @@ if confirmed; then
   cask_install flux
 fi
 
+yes_or_no "would you like to install google-backup-and-sync?"
+if confirmed; then
+  cask_install google-backup-and-sync
+fi
+
 running "cleaning up cask files"
 brew cleanup
 
