@@ -43,6 +43,9 @@ require_brew zsh
 running "installing zsh-autosuggestions"
 require_brew zsh-autosuggestions
 
+running "installing zsh-syntax-highlighting"
+require_brew zsh-syntax-highlighting
+
 running "installing nvm"
 require_brew nvm
 mkdir ~/.nvm
