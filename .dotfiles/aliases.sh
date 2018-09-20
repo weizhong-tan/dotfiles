@@ -35,3 +35,6 @@ alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resourc
 
 # turn off display
 alias afk='pmset displaysleepnow'
+
+# for typos
+alias nom='npm'

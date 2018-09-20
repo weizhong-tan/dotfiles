@@ -63,6 +63,7 @@
 	cp = cherry-pick
 	#############
 	d = diff
+	ds = "!git --no-pager diff --stat"
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 	#############
 	f = fetch
@@ -73,6 +74,7 @@
 	#############
 	g = grep -p
 	#############
+	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
 	ls = ls-files
 	lsf = "!git ls-files | grep -i"
 	#############

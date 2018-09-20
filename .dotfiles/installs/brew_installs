@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 function require_brew() {
-  running "brew install $1 $2"
   brew list $1 > /dev/null 2>&1 | true
   if [[ ${PIPESTATUS[0]} != 0 ]]; then
     action "brew install $1 $2"
@@ -10,13 +9,14 @@ function require_brew() {
       error "failed to install $1! aborting..."
       exit -1
     fi
+  else
+    error "$1 is already installed"
   fi
   ok
 }
 
 function cask_install() {
-  running "brew cask $1"
-  brew cask search $1 > /dev/null 2>&1 | true
+  brew cask list $1 > /dev/null 2>&1 | true
   if [[ ${PIPESTATUS[0]} != 0 ]]; then
     action "brew cask install $1 $2"
     brew cask install $1 $2
@@ -24,6 +24,8 @@ function cask_install() {
       error "failed to install $1! aborting..."
       exit -1
     fi
+  else
+    error "$1 is already installed"
   fi
   ok
 }
@@ -40,6 +42,12 @@ require_brew zsh
 
 running "installing zsh-autosuggestions"
 require_brew zsh-autosuggestions
+
+running "installing nvm"
+require_brew nvm
+mkdir ~/.nvm
+export NVM_DIR="$HOME/.nvm"
+  . "/usr/local/opt/nvm/nvm.sh"
 
 ########## APPS ###########
 running "installing brew cask"
@@ -87,6 +95,16 @@ fi
 yes_or_no "would you like to install google-backup-and-sync?"
 if confirmed; then
   cask_install google-backup-and-sync
+fi
+
+yes_or_no "would you like to install spectacle?"
+if confirmed; then
+  cask_install spectacle
+fi
+
+yes_or_no "would you like to install scroll-reverser?"
+if confirmed; then
+  cask_install scroll-reverser
 fi
 
 running "cleaning up cask files"
