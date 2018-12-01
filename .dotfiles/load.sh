@@ -9,6 +9,9 @@ ssh-add
 # Set postgres path
 export PATH="${PATH}:/Applications/Postgres.app/Contents/Versions/latest/bin:${HOME}/bin:/usr/local/bin"
 
+# python
+export PATH="${PATH}:${HOME}/Library/Python/3.7/bin"
+
 # Set nvm path
 export NVM_DIR="$HOME/.nvm"
 . "/usr/local/opt/nvm/nvm.sh"
