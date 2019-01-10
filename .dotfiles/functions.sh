@@ -52,7 +52,7 @@ function gclean() {
     git fetch --prune origin
 
     # deletes all merged branches from remote (except integration and master)
-    git branch --merged | grep -v "integration\|master" > /tmp/merged-branches
+    git branch --merged | grep -v "develop\|master" > /tmp/merged-branches
     vi /tmp/merged-branches && xargs git branch -d < /tmp/merged-branches
 }
 

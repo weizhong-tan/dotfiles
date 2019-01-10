@@ -6,6 +6,9 @@
 [web]
 	browser = google-chrome
 
+[pager]
+	branch = 0
+
 # [rerere]
 # 	enabled = 1
 # 	autoupdate = 1
