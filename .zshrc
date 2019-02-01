@@ -10,5 +10,3 @@ setopt    sharehistory
 zstyle ':completion:*' menu select
 autoload -U compinit
 compinit
-
-HISTFILE=~/.zsh_history
