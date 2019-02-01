@@ -12,10 +12,6 @@ export PATH="${PATH}:/Applications/Postgres.app/Contents/Versions/latest/bin:${H
 # python
 export PATH="${PATH}:${HOME}/Library/Python/3.7/bin"
 
-# Set nvm path
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
-
 # Setup Go path
 if hash go 2>/dev/null; then
     export GOPATH="${HOME}/go"
