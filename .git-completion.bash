@@ -1,1 +1,1 @@
-/Users/wzt/.dotfiles/.git-completion.bash
+/Users/wzt/.dotfiles/bash/.git-completion.bash
