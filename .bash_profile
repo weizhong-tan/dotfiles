@@ -1,1 +1,1 @@
-if [ -f $HOME/.bashrc ]; then source $HOME/.bashrc; fi
+/Users/wzt/.dotfiles/.bash_profile

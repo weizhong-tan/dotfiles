@@ -1,2 +1,1 @@
-set mouse=a
-set number
+/Users/wzt/.dotfiles/.vimrc

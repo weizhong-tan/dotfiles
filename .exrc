@@ -1,2 +1,1 @@
-syntax on
-set number
+/Users/wzt/.dotfiles/.exrc

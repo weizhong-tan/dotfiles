@@ -1,3 +1,1 @@
-\pset null '(null)'
-\pset pager off
-\x
+/Users/wzt/.dotfiles/.psqlrc
