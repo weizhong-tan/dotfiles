@@ -1,1 +1,1 @@
-/Users/wzt/.dotfiles/.exrc
+/Users/wzt/.dotfiles/vim/.exrc
