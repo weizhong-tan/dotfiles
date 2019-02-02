@@ -10,6 +10,8 @@ setopt sharehistory
 zstyle ':completion:*' menu select
 bindkey '^[[Z' reverse-menu-complete
 
+autoload -Uz compinit
+compinit
 # On slow systems, checking the cached .zcompdump file to see if it must be
 # regenerated adds a noticable delay to zsh startup.  This little hack restricts
 # it to once a day.  It should be pasted into your own completion file.
@@ -19,12 +21,11 @@ bindkey '^[[Z' reverse-menu-complete
 # - 'N' makes the glob pattern evaluate to nothing when it doesn't match (rather than throw a globbing error)
 # - '.' matches "regular files"
 # - 'mh+24' matches files (or directories or whatever) that are older than 24 hours.
-autoload -Uz compinit
-if [[ -n ${ZDOTDIR:-${HOME}}/$ZSH_COMPDUMP(#qN.mh+24) ]]; then
-	compinit -d $ZSH_COMPDUMP;
-else
-	compinit -C;
-fi;
+# if [[ -n ${ZDOTDIR:-${HOME}}/.zcompdump(#qN.mh+24) ]]; then
+# 	compinit -d ~/.zcompdump;
+# else
+# 	compinit -C;
+# fi;
 
 # http://stackoverflow.com/a/844299
 expand-or-complete-with-dots() {
