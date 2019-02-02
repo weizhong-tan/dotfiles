@@ -1,7 +1,7 @@
 export DOT_FILES=~/.dotfiles
 
 # Aliases and functions
-if [ -f "$DOT_FILES/load.sh" ]; then source "$DOT_FILES/load.sh"; fi
+if [ -f "$DOT_FILES/common.sh" ]; then source "$DOT_FILES/common.sh"; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
