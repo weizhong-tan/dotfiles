@@ -1,12 +1,9 @@
-# interact with dot-files
+# interact with dotfiles
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 # enhanced ls -lAh
 alias l='exa --long --all --header --git --group-directories-first'
 alias ll='l --grid'
-
-# alias ..='cd ..'
-# alias ...='cd ../..'
 
 alias g='git'
 # alias gl='git log  --color --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'\'' --abbrev-commit'
@@ -41,10 +38,8 @@ alias nom='npm'
 
 alias plugins='antibody bundle < ~/.zsh_plugins.zsh > ~/.zsh_plugins.sh'
 
-# Some cd aliases
-alias back='cd -'
-
 # ......
+alias back='cd -'
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
