@@ -57,14 +57,14 @@ ok "feel free to add more npm modules!"
 ###############################################################################
 # shell                                                                       #
 ###############################################################################
-running "downloading oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-if [[ $? != 0 ]]; then
-  error "unable to install oh-my-zsh -> quitting setup"
-  exit 2
-fi
-ok
+# running "downloading oh-my-zsh"
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#
+# if [[ $? != 0 ]]; then
+#   error "unable to install oh-my-zsh -> quitting setup"
+#   exit 2
+# fi
+# ok
 
 # install powerline fonts to enable certain zsh themes
 running "installing powerline fonts"
