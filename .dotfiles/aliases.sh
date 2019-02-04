@@ -1,5 +1,5 @@
 # interact with dotfiles
-alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+alias config="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 # enhanced ls -lAh
 alias l='exa --long --all --header --git --group-directories-first'
