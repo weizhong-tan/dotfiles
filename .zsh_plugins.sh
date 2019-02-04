@@ -1,1 +1,1 @@
-/Users/wzt/.dotfiles/zsh/.zsh_plugins.sh
+.dotfiles/zsh/.zsh_plugins.sh

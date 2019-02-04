@@ -1,1 +1,1 @@
-/Users/wzt/.dotfiles/bash/.bash_profile
+.dotfiles/bash/.bash_profile

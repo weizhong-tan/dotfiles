@@ -1,1 +1,1 @@
-/Users/wzt/.dotfiles/bash/.bashrc
+.dotfiles/bash/.bashrc

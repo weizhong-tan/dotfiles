@@ -1,1 +1,1 @@
-/Users/wzt/.dotfiles/zsh/.zshrc
+.dotfiles/zsh/.zshrc

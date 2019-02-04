@@ -1,1 +1,1 @@
-/Users/wzt/.dotfiles/bash/.git-prompt.sh
+.dotfiles/bash/.git-prompt.sh
