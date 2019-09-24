@@ -10,9 +10,9 @@
 [pager]
 	branch = 0
 
-# [rerere]
-# 	enabled = 1
-# 	autoupdate = 1
+[rerere]
+	enabled = 1
+	autoupdate = 1
 
 [push]
 	default = simple
