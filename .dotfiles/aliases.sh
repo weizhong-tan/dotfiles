@@ -62,3 +62,5 @@ alias rm='rm -i'
 
 # derp derp
 alias mkdirp='mkdir -p'
+
+alias c='code'

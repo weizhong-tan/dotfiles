@@ -23,3 +23,6 @@ fi
 
 # load local custom files
 [[ -s "$HOME/.custom" ]] && source "$HOME/.custom"
+
+# python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
