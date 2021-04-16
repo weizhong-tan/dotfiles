@@ -4,8 +4,6 @@ export DOT_FILES=~/.dotfiles
 # Aliases and functions
 if [ -f "$DOT_FILES/common.sh" ]; then source "$DOT_FILES/common.sh"; fi
 
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # Adds colour by default to ls
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
