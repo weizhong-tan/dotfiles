@@ -1,5 +1,5 @@
 # loads aliases and functions
-for file in $DOT_FILES/{aliases,functions}.sh; do
+for file in $DOT_FILES/{aliases,functions,aws,custom}.sh; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
@@ -20,9 +20,6 @@ fi
 
 # avn https://github.com/wbyoung/avn
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
-
-# load local custom files
-[[ -s "$HOME/.custom" ]] && source "$HOME/.custom"
 
 # python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
