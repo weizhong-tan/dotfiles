@@ -9,7 +9,7 @@ setopt sharehistory
 bindkey '^[[Z' reverse-menu-complete
 export COMPLETION_WAITING_DOTS="true";
 
-source ~/.zsh_plugins.sh
+source "$DOT_FILES/zsh/zsh_plugins_generated.sh"
 
 autoload -Uz compinit
 compinit
