@@ -70,7 +70,9 @@
 	cp = cherry-pick
 	#############
 	d = diff
+	dc = diff --cached
 	ds = "!git --no-pager diff --stat"
+	dsc = "!git --no-pager diff --stat --cached"
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 	#############
 	f = fetch
@@ -90,6 +92,7 @@
 	mc = merge --continue
 	ms = merge --skip
 	#############
+	cl = clone
 	co = checkout
 	cob = checkout -b
 	com = checkout master
