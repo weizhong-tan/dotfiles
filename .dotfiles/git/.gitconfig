@@ -102,6 +102,7 @@
 	ps = push
 	psf = push -f
 	psu = push -u
+	psuoh = push -u origin HEAD
 	pso = push origin
 	psao = push --all origin
 	psfo = push -f origin
