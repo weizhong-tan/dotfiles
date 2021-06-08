@@ -36,7 +36,8 @@ alias afk='pmset displaysleepnow'
 # for typos
 alias nom='npm'
 
-alias plugins='antibody bundle < ~/.zsh_plugins.zsh > ~/.zsh_plugins.sh'
+# Updates antibody plugins cache
+alias bundle_plugins='antibody bundle < ~/.dotfiles/zsh/zsh_plugins.zsh > ~/.dotfiles/zsh/zsh_plugins_generated.sh'
 
 # ......
 alias back='cd -'

@@ -1,3 +1,7 @@
+###########################################################
+# Remember to run `bundle_plugins` after changing this file
+###########################################################
+
 # THEMES
 # denysdovhan/spaceship-prompt
 # agnoster/agnoster-zsh-theme
