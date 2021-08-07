@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 source "$DOT_FILES/resources.sh"
 
 bot "hello! welcome to your new computer"
@@ -45,14 +45,9 @@ brew doctor
 brew update
 ok
 
-running "Select which bundled brew & brew-cask packages you want to install"
-source "$DOT_FILES/installs/brew_installs"
-ok "feel free to add more brew packages!"
-
-# globally install key npm pkgs
-running "Select which bundled npm modules you want to install"
-source "$DOT_FILES/installs/npm_installs"
-ok "feel free to add more npm modules!"
+running "installing brew packages"
+brew bundle install --file "$DOT_FILES/Brewfile"
+ok
 
 ###############################################################################
 # shell                                                                       #
@@ -101,4 +96,4 @@ if confirmed; then
   ok
 fi
 
-bot "whooo, all set! "
+bot "whooo, all set!"
