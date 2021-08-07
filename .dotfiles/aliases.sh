@@ -64,6 +64,7 @@ alias rm='rm -i'
 # derp derp
 alias mkdirp='mkdir -p'
 
+# vscode
 alias c='code'
 
 # aws cli

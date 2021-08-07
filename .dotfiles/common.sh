@@ -18,9 +18,6 @@ if hash go 2>/dev/null; then
     export PATH=$PATH:$(go env GOPATH)/bin
 fi
 
-# avn https://github.com/wbyoung/avn
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh"
-
 # python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
