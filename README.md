@@ -16,3 +16,9 @@ config config --local status.showUntrackedFiles no
 ```
 
 adapted from [source](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/)
+
+## Todo:
+- Ask to install each brew formula
+- Add docs/automate git setup
+- Fix OSX settings
+- Add docs for zsh anitbody setup

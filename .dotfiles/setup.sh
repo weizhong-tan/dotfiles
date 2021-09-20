@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+export DOT_FILES=~/.dotfiles
 source "$DOT_FILES/resources.sh"
 
 bot "hello! welcome to your new computer"
