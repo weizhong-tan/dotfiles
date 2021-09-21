@@ -21,7 +21,7 @@ function set_git_info() {
   git config --global user.name
   git config --global user.email
 
-  git config --global include.path "$DOT_FILES/.gitconfig"
+  git config --global include.path "$DOT_FILES/git/.gitconfig"
 }
 
 # Create `ipa` command. `ipa local` gives your

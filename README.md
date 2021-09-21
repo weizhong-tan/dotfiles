@@ -13,12 +13,16 @@ config config --local status.showUntrackedFiles no
 
 # first-time installation setup
 ~/.dotfiles/setup.sh
+
+# setup git config for dotfiles updates
+config config user.name NAME
+config config user.email EMAIL
 ```
 
 adapted from [source](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/)
 
 ## Todo:
 - Ask to install each brew formula
-- Add docs/automate git setup
 - Fix OSX settings
 - Add docs for zsh anitbody setup
+
