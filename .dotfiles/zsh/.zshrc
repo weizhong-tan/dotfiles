@@ -47,3 +47,7 @@ unset __conda_setup
 
 eval "$(zoxide init zsh --cmd j)"
 
+# Edit shell commands in vim
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line

@@ -22,3 +22,6 @@ fi
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 eval "$(fnm env)"
+
+# Edit shell commands in vim
+set -o vi
