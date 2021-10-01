@@ -45,9 +45,13 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-eval "$(zoxide init zsh --cmd j)"
+if hash zoxide 2>/dev/null; then
+    eval "$(zoxide init zsh --cmd j)"
+fi
 
 # Edit shell commands in vim
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
+
+eval "$(rbenv init -)"

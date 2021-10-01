@@ -6,9 +6,6 @@ done;
 # adds RSA or DSA identities to the authentication agent: ~/.ssh/id_rsa, ~/.ssh/id_dsa and ~/.ssh/identity
 ssh-add
 
-# Set postgres path
-export PATH="${PATH}:/Applications/Postgres.app/Contents/Versions/latest/bin:${HOME}/bin:/usr/local/bin"
-
 # python
 export PATH="${PATH}:${HOME}/Library/Python/3.7/bin"
 
@@ -21,4 +18,6 @@ fi
 # python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
-eval "$(fnm env)"
+if hash fnm 2>/dev/null; then
+    eval "$(fnm env)"
+fi
