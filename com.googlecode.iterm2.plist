@@ -1294,7 +1294,7 @@
 				<key>editor</key>
 				<string>com.microsoft.VSCode</string>
 				<key>text</key>
-				<string></string>
+				<string>goland \1 --line \2</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>

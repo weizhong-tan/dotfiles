@@ -9,12 +9,6 @@ ssh-add
 # python
 export PATH="${PATH}:${HOME}/Library/Python/3.7/bin"
 
-# Setup Go path
-if hash go 2>/dev/null; then
-    export GOPATH="${HOME}/go"
-    export PATH=$PATH:$(go env GOPATH)/bin
-fi
-
 # python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
