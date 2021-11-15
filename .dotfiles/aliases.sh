@@ -70,4 +70,4 @@ alias c='code'
 # aws cli
 alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v $(pwd):/aws amazon/aws-cli'
 
-alias psql=pgcli
+# alias psql=pgcli
