@@ -8,10 +8,15 @@ ssh-add
 
 # python
 export PATH="${PATH}:${HOME}/Library/Python/3.7/bin"
-
-# python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
+# https://github.com/Schniz/fnm
 if hash fnm 2>/dev/null; then
     eval "$(fnm env)"
 fi
+
+# https://github.com/dylanaraps/fff
+f() {
+    fff "$@"
+    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
+}
