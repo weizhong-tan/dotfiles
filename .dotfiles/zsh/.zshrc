@@ -9,6 +9,8 @@ setopt sharehistory
 bindkey '^[[Z' reverse-menu-complete
 export COMPLETION_WAITING_DOTS="true";
 
+zstyle :prompt:pure:git:stash show yes
+
 source "$DOT_FILES/zsh/zsh_plugins_generated.sh"
 
 autoload -Uz compinit

@@ -3,8 +3,6 @@
 ###########################################################
 
 # THEMES
-# denysdovhan/spaceship-prompt
-# agnoster/agnoster-zsh-theme
 mafredri/zsh-async
 sindresorhus/pure
 
