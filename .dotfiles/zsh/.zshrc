@@ -47,16 +47,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-if hash zoxide 2>/dev/null; then
-    eval "$(zoxide init zsh --cmd j)"
-fi
-
 # Edit shell commands in vim
 autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
-
-eval "$(rbenv init -)"
 
 export GOPATH="$HOME/dev"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 alias ggovm="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g

@@ -1,5 +1,5 @@
 # loads aliases and functions
-for file in $DOT_FILES/{aliases,functions,aws,custom}.sh; do
+for file in $DOT_FILES/{shell/aliases,shell/functions,aws,custom}.sh; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 
@@ -13,6 +13,14 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 # https://github.com/Schniz/fnm
 if hash fnm 2>/dev/null; then
     eval "$(fnm env)"
+fi
+
+if hash zoxide 2>/dev/null; then
+    eval "$(zoxide init zsh --cmd j)"
+fi
+
+if hash rbenv 2>/dev/null; then
+    eval "$(rbenv init -)"
 fi
 
 # https://github.com/dylanaraps/fff
