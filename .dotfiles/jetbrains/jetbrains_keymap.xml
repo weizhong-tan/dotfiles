@@ -37,6 +37,11 @@
   <action id="PreviousTab">
     <keyboard-shortcut first-keystroke="meta alt left" />
   </action>
+  <action id="SaveAll">
+    <keyboard-shortcut first-keystroke="meta alt s" />
+    <keyboard-shortcut first-keystroke="meta s" />
+  </action>
+  <action id="SaveDocument" />
   <action id="SelectAllOccurrences">
     <keyboard-shortcut first-keystroke="meta f2" />
     <keyboard-shortcut first-keystroke="ctrl meta g" />
