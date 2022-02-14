@@ -146,8 +146,11 @@
 	#############
 	s = status
 	sb = status -s -b
+	#############
 	st = stash
 	stp = stash pop
 	sta = stash apply
 	stl = stash list
 	stpm = stash push -m
+	stsp = stash show -p
+	std = stash drop
