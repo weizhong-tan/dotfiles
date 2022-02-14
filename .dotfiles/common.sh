@@ -12,7 +12,7 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # https://github.com/Schniz/fnm
 if hash fnm 2>/dev/null; then
-    eval "$(fnm env)"
+    eval "$(fnm env --use-on-cd)"
 fi
 
 if hash zoxide 2>/dev/null; then
