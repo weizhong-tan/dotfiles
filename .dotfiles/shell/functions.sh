@@ -47,13 +47,16 @@ function ipa() {
 }
 
 function gclean() {
+    set -x
+
     # remove branches deleted on remote
-    echo 'git fetch --prune origin'
     git fetch --prune origin
 
-    # deletes all merged branches from remote (except integration and master)
-    git branch --merged | grep -v "develop\|master" > /tmp/merged-branches
-    vi /tmp/merged-branches && xargs git branch -d < /tmp/merged-branches
+    # delete merged branches
+    g dm
+
+    # delete squashed branches
+    git-delete-squashed
 }
 
 # `o` with no arguments opens the current directory, otherwise opens the given
