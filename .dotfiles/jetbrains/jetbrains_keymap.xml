@@ -28,5 +28,8 @@
   <action id="PreviousTab">
     <keyboard-shortcut first-keystroke="meta alt left" />
   </action>
+  <action id="RunClass">
+    <keyboard-shortcut first-keystroke="shift meta r" />
+  </action>
   <action id="XDebugger.CopyWatch" />
 </keymap>
