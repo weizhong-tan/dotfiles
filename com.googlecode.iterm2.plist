@@ -564,6 +564,8 @@
 	<real>153</real>
 	<key>DimBackgroundWindows</key>
 	<false/>
+	<key>EnableAPIServer</key>
+	<true/>
 	<key>EnableDivisionView</key>
 	<true/>
 	<key>HapticFeedbackForEsc</key>
@@ -1617,7 +1619,7 @@
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>StretchTabsToFillBar</key>
