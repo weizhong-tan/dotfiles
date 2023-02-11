@@ -28,3 +28,6 @@ f() {
     fff "$@"
     cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
 }
+
+export FLYCTL_INSTALL="/Users/wzt/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
