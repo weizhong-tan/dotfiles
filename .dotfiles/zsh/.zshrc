@@ -11,8 +11,6 @@ export COMPLETION_WAITING_DOTS="true";
 
 zstyle :prompt:pure:git:stash show yes
 
-source "$DOT_FILES/zsh/zsh_plugins_generated.sh"
-
 autoload -Uz compinit
 compinit
 # On slow systems, checking the cached .zcompdump file to see if it must be
@@ -41,3 +39,8 @@ export GOPATH="$HOME/dev"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/11/bin
 
 test -d "$HOME/.tea" && source <("$HOME/.tea/tea.xyz/v*/bin/tea" --magic=zsh --silent)
+
+eval "$(starship init zsh)"
+
+# Must be last.
+source "$DOT_FILES/zsh/zsh_plugins_generated.sh"

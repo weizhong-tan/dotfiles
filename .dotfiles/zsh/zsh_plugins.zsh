@@ -3,8 +3,8 @@
 ###########################################################
 
 # THEMES
-mafredri/zsh-async
-sindresorhus/pure
+# mafredri/zsh-async
+# sindresorhus/pure
 
 zsh-users/zsh-autosuggestions
 zsh-users/zsh-completions

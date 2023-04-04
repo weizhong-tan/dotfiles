@@ -31,3 +31,5 @@ f() {
 
 export FLYCTL_INSTALL="/Users/wzt/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+export STARSHIP_CONFIG=$DOT_FILES/starship/starship.toml
