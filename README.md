@@ -1,5 +1,9 @@
 # dotfiles
 
+## Prereq
+
+- See [starship](https://starship.rs/) prerequisites.
+
 ## Installing on to a new system
 
 ```sh
@@ -21,8 +25,7 @@ config config user.email EMAIL
 
 adapted from [source](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/)
 
-## Todo:
-- Ask to install each brew formula
-- Fix OSX settings
-- Add docs for zsh anitbody setup
+## Todo
 
+- Fix OSX settings
+- Replace antibody with [antidote](https://github.com/mattmc3/antidote)
