@@ -3,6 +3,10 @@ export DOT_FILES=~/.dotfiles
 # Aliases and functions
 if [ -f "$DOT_FILES/common.sh" ]; then source "$DOT_FILES/common.sh"; fi
 
+# Antidote setup.
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 setopt sharehistory
@@ -41,6 +45,3 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/11/bin
 test -d "$HOME/.tea" && source <("$HOME/.tea/tea.xyz/v*/bin/tea" --magic=zsh --silent)
 
 eval "$(starship init zsh)"
-
-# Must be last.
-source "$DOT_FILES/zsh/zsh_plugins_generated.sh"

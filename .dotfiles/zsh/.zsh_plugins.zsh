@@ -1,8 +1,3 @@
-###########################################################
-# Remember to run `bundle_plugins` after changing this file
-###########################################################
-
-# THEMES
 # mafredri/zsh-async
 # sindresorhus/pure
 
