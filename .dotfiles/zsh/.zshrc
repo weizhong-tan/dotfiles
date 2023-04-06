@@ -39,9 +39,10 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
-export GOPATH="$HOME/dev"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/11/bin
 
 test -d "$HOME/.tea" && source <("$HOME/.tea/tea.xyz/v*/bin/tea" --magic=zsh --silent)
 
 eval "$(starship init zsh)"
+
+eval "$(zoxide init zsh --cmd j)"
