@@ -7,8 +7,6 @@ if [ -f "$DOT_FILES/common.sh" ]; then source "$DOT_FILES/common.sh"; fi
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 setopt sharehistory
 bindkey '^[[Z' reverse-menu-complete
 export COMPLETION_WAITING_DOTS="true";

@@ -7,5 +7,6 @@ MichaelAquilina/zsh-you-should-use
 robbyrussell/oh-my-zsh path:lib/history.zsh
 robbyrussell/oh-my-zsh path:plugins/colored-man-pages
 robbyrussell/oh-my-zsh path:lib/completion.zsh
+robbyrussell/oh-my-zsh path:plugins/fzf
 
 zsh-users/zsh-syntax-highlighting
