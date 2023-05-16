@@ -21,3 +21,6 @@ export GOPATH="$HOME/dev"
 if hash rbenv 2>/dev/null; then
     eval "$(rbenv init -)"
 fi
+
+# tea
+export TEA_MAGIC=prompt
