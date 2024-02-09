@@ -1,0 +1,1 @@
+/Users/wzt/.dotfiles/setup.sh

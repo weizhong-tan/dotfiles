@@ -3,15 +3,15 @@ export DOT_FILES=~/.dotfiles
 # Aliases and functions
 if [ -f "$DOT_FILES/common.sh" ]; then source "$DOT_FILES/common.sh"; fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Antidote setup.
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+antidote load
 
 setopt sharehistory
 bindkey '^[[Z' reverse-menu-complete
 export COMPLETION_WAITING_DOTS="true";
 
 zstyle :prompt:pure:git:stash show yes
-
-source "$DOT_FILES/zsh/zsh_plugins_generated.sh"
 
 autoload -Uz compinit
 compinit
@@ -37,6 +37,13 @@ autoload -U edit-command-line
 zle -N edit-command-line
 bindkey '\C-x\C-e' edit-command-line
 
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/11/bin
+
+eval "$(starship init zsh)"
+
+eval "$(zoxide init zsh --cmd j)"
+
 export GOPATH="$HOME/dev"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 alias ggovm="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/11/bin
+
+eval "$(fnm env --use-on-cd)"
