@@ -39,8 +39,11 @@ bindkey '\C-x\C-e' edit-command-line
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/11/bin
 
-test -d "$HOME/.tea" && source <("$HOME/.tea/tea.xyz/v*/bin/tea" --magic=zsh --silent)
-
 eval "$(starship init zsh)"
 
 eval "$(zoxide init zsh --cmd j)"
+
+export GOPATH="$HOME/dev"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
+alias ggovm="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
+
+eval "$(fnm env --use-on-cd)"

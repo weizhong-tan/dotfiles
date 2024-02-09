@@ -9,3 +9,5 @@
 thumbs.db
 Thumbs.db
 .cfg
+.dotfiles/jetbrains
+!.dotfiles/jetbrains/jetbrains_keymap.xml

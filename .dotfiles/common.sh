@@ -17,10 +17,6 @@ export STARSHIP_CONFIG=$DOT_FILES/starship/starship.toml
 export GOPATH="$HOME/dev"
 
 # ruby
-# TODO: replace with tea
 if hash rbenv 2>/dev/null; then
     eval "$(rbenv init -)"
 fi
-
-# tea
-export TEA_MAGIC=prompt
