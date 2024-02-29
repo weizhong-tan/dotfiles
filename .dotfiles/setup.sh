@@ -47,40 +47,11 @@ brew doctor
 brew update
 ok
 
-running "installing brew packages"
-brew bundle install --file "$DOT_FILES/Brewfile"
-ok
-
-###############################################################################
-# shell                                                                       #
-###############################################################################
-# running "downloading oh-my-zsh"
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-#
-# if [[ $? != 0 ]]; then
-#   error "unable to install oh-my-zsh -> quitting setup"
-#   exit 2
-# fi
-# ok
-
-# install powerline fonts to enable certain zsh themes
-running "installing powerline fonts"
-git clone https://github.com/powerline/fonts.git --depth=1
-cd fonts
-./install.sh
-cd ..
-rm -rf fonts
-ok
-
-bot "setting zsh as the user shell"
-CURRENTSHELL=$(dscl . -read /Users/$USER UserShell | awk '{print $2}')
-if [[ "$CURRENTSHELL" != "/usr/local/bin/zsh" ]]; then
-  bot "setting newer homebrew zsh (/usr/local/bin/zsh) as your shell (password required)"
-  sudo dscl . -change /Users/$USER UserShell $SHELL /usr/local/bin/zsh > /dev/null 2>&1
-
-  # https://stackoverflow.com/questions/36691601/how-to-make-zsh-autocomplete-failover-to-compdef-files
-  bot "adding new zsh to /etc/shells (fixes command completion)"
-  echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells > /dev/null
+# setup git credentials
+yes_or_no "Install from Brewfile?"
+if confirmed; then
+  running "installing brew packages"
+  brew bundle install --file "$DOT_FILES/brew/Brewfile"
   ok
 fi
 

@@ -2,7 +2,7 @@
 alias config="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 
 # enhanced ls -lAh
-alias l='exa --long --all --header --git --group-directories-first'
+alias l='eza --long --all --header --git --group-directories-first'
 alias ll='l --grid'
 
 alias g='git'

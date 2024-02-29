@@ -28,4 +28,5 @@ adapted from [source](https://developer.atlassian.com/blog/2016/02/best-way-to-s
 ## Todo
 
 - Fix OSX settings
-- Replace antibody with [antidote](https://github.com/mattmc3/antidote)
+- Add setup for .gitconfig
+- Add setup for starship compatible fonts
