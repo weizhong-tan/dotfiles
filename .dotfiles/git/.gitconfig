@@ -59,6 +59,12 @@
 	changed = yellow bold
 	untracked = red bold
 
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+
 [alias]
 	#############
 	aliases = config --get-regexp alias
