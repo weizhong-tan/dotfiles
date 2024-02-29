@@ -1,9 +1,5 @@
 # dotfiles
 
-## Prereq
-
-- See [starship](https://starship.rs/) prerequisites.
-
 ## Installing on to a new system
 
 ```sh
@@ -29,4 +25,3 @@ adapted from [source](https://developer.atlassian.com/blog/2016/02/best-way-to-s
 
 - Fix OSX settings
 - Add setup for .gitconfig
-- Add setup for starship compatible fonts
