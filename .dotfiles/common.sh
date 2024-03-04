@@ -1,5 +1,5 @@
 # loads aliases and functions
-for file in $DOT_FILES/{shell/aliases,shell/functions,aws,secret/custom}.sh; do
+for file in $DOT_FILES/{shell/aliases,shell/functions,aws,private/custom}.sh; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 

@@ -3,4 +3,4 @@ zsh/zsh_plugins_generated.sh
 jetbrains/webstorm
 .cfg
 
-secret/*
+private/*
