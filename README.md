@@ -11,4 +11,3 @@ chezmoi init --apply $GITHUB_USERNAME
 ## Todo
 
 - Fix OSX settings
-- Add setup for .gitconfig
