@@ -1,4 +1,4 @@
-# dotfiles1
+# dotfiles
 
 ## Installing on to a new system
 
