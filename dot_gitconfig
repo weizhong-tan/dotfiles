@@ -1,7 +1,186 @@
-[include]
-	path = /Users/wzt/.dotfiles/git/.gitconfig
 [user]
 	email = 15849218+weizhongtan@users.noreply.github.com
 	name = weizhongtan
+
 [url "git@github.com:"]
 	insteadOf = https://github.com
+
+[core]
+	editor = vim
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol, space-before-tab
+	excludesfile = ~/.gitignore
+	# pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[add.interactive]
+	useBuiltin = false # required for git 2.37.0
+
+[delta]
+	navigate = true    # use n and N to move between diff sections
+	light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+
+[branch]
+	autosetuprebase = always
+
+[pager]
+	branch = 0
+
+[rerere]
+	enabled = 1
+	autoupdate = 1
+
+[pull]
+	rebase = true
+
+[push]
+	default = simple
+
+[color]
+	ui = auto
+
+[help]
+	autocorrect = 50
+
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+
+[alias]
+	#############
+	aliases = config --get-regexp alias
+	a = add --all
+	ai = add -i
+	#############
+	ap = apply
+	as = apply --stat
+	ac = apply --check
+	#############
+	ama = am --abort
+	amr = am --resolved
+	ams = am --skip
+	#############
+	b = branch
+	ba = branch -a
+	bd = branch -d
+	br = branch -r
+	#############
+	c = commit
+	ca = commit -a
+	cm = commit -m
+	cam = commit -am
+	cd = commit --amend
+	cp = cherry-pick
+	#############
+	d = diff
+	dc = diff --cached
+	ds = "!git --no-pager diff --stat"
+	dsc = "!git --no-pager diff --stat --cached"
+	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+	#############
+	f = fetch
+	fo = fetch origin
+	fu = fetch upstream
+	#############
+	fp = format-patch
+	#############
+	g = grep -p
+	#############
+	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	ls = ls-files
+	lsf = "!git ls-files | grep -i"
+	#############
+	m = merge
+	ma = merge --abort
+	mc = merge --continue
+	ms = merge --skip
+	#############
+	cl = clone
+	co = checkout
+	cob = checkout -b
+	com = checkout master
+	#############
+	pr = prune -v
+	#############
+	ps = push
+	psf = push -f
+	psu = push -u
+	pso = push origin
+	psao = push --all origin
+	psfo = push -f origin
+	psuo = push -u origin
+	psom = push origin master
+	psuoh = push -u origin HEAD
+	psuom = push -u origin master
+	#############
+	pl = pull
+	plu = pull -u
+	plo = pull origin
+	plp = pull upstream
+	plom = pull origin master
+	#############
+	pb = pull --rebase
+	pbo = pull --rebase origin
+	pbp = pull --rebase upstream
+	pbom = pull --rebase origin master
+	pbpm = pull --rebase upstream master
+	#############
+	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbi = rebase --interactive
+	rbs = rebase --skip
+	#############
+	re = reset
+	rh = reset HEAD
+	reh = reset --hard
+	res = reset --soft
+	rehh = reset --hard HEAD
+	resh = reset --soft HEAD
+	#############
+	r = remote
+	ra = remote add
+	rr = remote rm
+	rv = remote -v
+	rm = remote rename
+	rs = remote show
+	rao = remote add origin
+	rso = remote show origin
+	#############
+	s = status
+	sb = status -s -b
+	#############
+	st = stash
+	stp = stash pop
+	sta = stash apply
+	stl = stash list
+	stpm = stash push -m
+	stsp = stash show -p
+	std = stash drop
