@@ -1,0 +1,7 @@
+[include]
+	path = /Users/wzt/.dotfiles/git/.gitconfig
+[user]
+	email = 15849218+weizhongtan@users.noreply.github.com
+	name = weizhongtan
+[url "git@github.com:"]
+	insteadOf = https://github.com
