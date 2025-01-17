@@ -4,7 +4,11 @@ export DOT_FILES=~/.dotfiles
 if [ -f "$DOT_FILES/common.sh" ]; then source "$DOT_FILES/common.sh"; fi
 
 # Antidote setup.
+{{- if eq .chezmoi.os "darwin" }}
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
+{{- else if eq .chezmoi.os "linux" }}
+source /home/wzt/.antidote/antidote.zsh
+{{- end }}
 antidote load
 
 setopt sharehistory
@@ -46,6 +50,14 @@ eval "$(zoxide init zsh --cmd j)"
 export GOPATH="$HOME/dev"; export GOROOT="$HOME/.go"; export PATH="$GOPATH/bin:$PATH"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 alias ggovm="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stefanmaric/g
 
+{{- if eq .chezmoi.os "linux" }}
+FNM_PATH="/home/wzt/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/wzt/.local/share/fnm:$PATH"
+  eval "`fnm env --use-on-cd`"
+fi
+{{- end }}
 eval "$(fnm env --use-on-cd)"
+
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
