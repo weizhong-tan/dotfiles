@@ -1,1 +1,0 @@
-/Users/wzt/.zsh_plugins.txt

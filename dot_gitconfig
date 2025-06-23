@@ -1,9 +1,6 @@
 [user]
-	email = 15849218+weizhongtan@users.noreply.github.com
-	name = weizhongtan
-
-[url "git@github.com:"]
-	insteadOf = https://github.com
+	email = weizhong.tan@samsara.com
+	name = Wei Zhong Tan
 
 [core]
 	editor = vim
