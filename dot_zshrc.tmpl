@@ -56,3 +56,45 @@ fi
 {{- end }}
 eval "$(fnm env --use-on-cd)"
 
+eval "$(direnv hook zsh)"
+
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=/opt/homebrew/bin/chromium
+
+function claude() {
+  # first capture the real “claude” binary
+  local real_bin
+  real_bin="$(whence -p claude)" || {
+    echo "💥 could not locate upstream 'claude' binary" >&2
+    return 1
+  }
+  # now shadow-remove this function so we can exec the real binary
+  unset -f claude
+  # set your env
+  export BACKEND_ROOT="$HOME/dev/backend"
+  export PATH="$PATH:$HOME/dev/backend/go/bin"
+  export AWS_CONFIG_FILE="$HOME/dev/backend/.aws/config"
+  export AWS_REGION=us-west-2
+  export AWS_PROFILE=playground
+  export CLAUDE_CODE_USE_BEDROCK=1
+  # re-exec the real binary with all args
+  exec "$real_bin" "$@"
+}
+
+# Interactively select and delete history entries with fzf
+delete-history-fzf() {
+    local entries=$(history | fzf --multi --tac --no-sort | awk '{print $1}')
+    if [[ -n "$entries" ]]; then
+        local count=0
+        # Sort line numbers in reverse order to delete from bottom up
+        # This prevents line number shifting during deletion
+        echo "$entries" | sort -rn | while read line_number; do
+            history -d "$line_number"
+            sed -i.bak "${line_number}d" "$HISTFILE"
+            ((count++))
+        done
+        fc -R
+        echo "Deleted $count history entries"
+    fi
+}
+

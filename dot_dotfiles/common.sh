@@ -6,6 +6,8 @@ done;
 # adds RSA or DSA identities to the authentication agent: ~/.ssh/id_rsa, ~/.ssh/id_dsa and ~/.ssh/identity
 ssh-add
 
+export PATH="/Users/wzt/bin:$PATH"
+
 # fly.io
 export FLYCTL_INSTALL="/Users/wzt/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"

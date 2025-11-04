@@ -153,6 +153,8 @@
 	rba = rebase --abort
 	rbc = rebase --continue
 	rbi = rebase --interactive
+	rbiq = rebase --interactive --autosquash
+	rbq = rebase --autosquash
 	rbs = rebase --skip
 	#############
 	re = reset
