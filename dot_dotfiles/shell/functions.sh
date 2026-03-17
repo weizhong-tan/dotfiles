@@ -57,7 +57,7 @@ function gclean() {
 
     # delete squashed branches
     git-delete-squashed
-    git-delete-squashed main
+    git-delete-squashed master
 }
 
 # `o` with no arguments opens the current directory, otherwise opens the given
